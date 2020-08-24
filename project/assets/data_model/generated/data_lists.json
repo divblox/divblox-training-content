@@ -1,0 +1,23 @@
+{
+  "AdditionalAccountInformationTypes": [
+    "Email Address",
+    "Contact Number",
+    "Facebook",
+    "Twitter",
+    "Instagram",
+    "Other"
+  ],
+  "[ListName]": [
+    "Value1",
+    "Value2",
+    "Value3"
+  ],
+  "TicketStatuses": [
+    "New",
+    "In Progress",
+    "DueSoon",
+    "Urgent",
+    "Complete",
+    "Overdue"
+  ]
+}

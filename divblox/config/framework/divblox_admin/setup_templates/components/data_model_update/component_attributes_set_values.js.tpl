@@ -1,0 +1,1 @@
+getComponentElementById(this,"[Attribute]").[ValueSetFunction];
