@@ -1,4 +1,30 @@
 {
+    "basic_training_menu": [
+        {
+            "index": 1,
+            "item_label": "<i class=\"fa fa-home\" aria-hidden=\"true\"><\/i><br\/>Admin",
+            "item_active_class": "admin",
+            "item_click_class": "menu-basic_training_menu-1",
+            "sub_menu": null,
+            "page_to_load": "admin",
+            "show_divider": false,
+            "allowed_user_roles": null,
+            "function_to_execute": null,
+            "javascript_inputs": null
+        },
+        {
+            "index": 2,
+            "item_label": "<i class=\"fa fa-link\" aria-hidden=\"true\"><\/i><br\/>New Ticket",
+            "item_active_class": "new_ticket",
+            "item_click_class": "menu-basic_training_menu-2",
+            "sub_menu": null,
+            "page_to_load": "new_ticket",
+            "show_divider": false,
+            "allowed_user_roles": null,
+            "function_to_execute": null,
+            "javascript_inputs": null
+        }
+    ],
     "default": [
         {
             "index": 1,
