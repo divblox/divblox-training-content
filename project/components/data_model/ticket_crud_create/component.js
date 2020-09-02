@@ -13,6 +13,22 @@ if (typeof component_classes['data_model_ticket_crud_create'] === "undefined") {
 			this.required_validation_array = ['TicketName','TicketDescription','TicketDueDate','TicketStatus','TicketUniqueId','Category',];
 			this.initCrudVariables("Ticket");
 		}
-	}
+	    initCustomFunctions() {
+            // Kzd7U_button Related functionality
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            getComponentElementById(this,"Kzd7U_btn").on("click", function() {
+                // Example code that executes when the button is clicked
+            	// Add the trigger element to the loading element array. This shows a loading animation on the trigger
+                // element while it waits for a response or function return
+                let element_id = addTriggerElementToLoadingElementArray(getComponentElementById(this,"Kzd7U_btn"),"Nice Loading text");
+                // Example: once your function has executed, call removeTriggerElementFromLoadingElementArray to remove
+                // loading animation
+                setTimeout(function() {
+                    removeTriggerElementFromLoadingElementArray(element_id);
+                },3000);
+            }.bind(this));
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        }
+   	}
 	component_classes['data_model_ticket_crud_create'] = data_model_ticket_crud_create;
 }
