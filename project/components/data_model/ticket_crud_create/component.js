@@ -17,15 +17,18 @@ if (typeof component_classes['data_model_ticket_crud_create'] === "undefined") {
             // Kzd7U_button Related functionality
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             getComponentElementById(this,"Kzd7U_btn").on("click", function() {
-                // Example code that executes when the button is clicked
-            	// Add the trigger element to the loading element array. This shows a loading animation on the trigger
-                // element while it waits for a response or function return
-                let element_id = addTriggerElementToLoadingElementArray(getComponentElementById(this,"Kzd7U_btn"),"Nice Loading text");
-                // Example: once your function has executed, call removeTriggerElementFromLoadingElementArray to remove
-                // loading animation
-                setTimeout(function() {
-                    removeTriggerElementFromLoadingElementArray(element_id);
-                },3000);
+				dxRequestInternal(
+					getComponentControllerPath(this),
+					// Tell component.php which function to execute
+					{ f: "getNewTicketUniqueId" },
+					function (data_obj) {
+						// Success function
+						getComponentElementById(this, "TicketUniqueId").val(data_obj.TicketId);
+					}.bind(this),
+					function (data_obj) {
+						// Fail function
+					}.bind(this)
+				);
             }.bind(this));
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
