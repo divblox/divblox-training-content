@@ -8,7 +8,9 @@
             "sub_menu": null,
             "page_to_load": "admin",
             "show_divider": false,
-            "allowed_user_roles": null,
+            "allowed_user_roles": [
+                "administrator"
+            ],
             "function_to_execute": null,
             "javascript_inputs": null
         },
