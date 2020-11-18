@@ -661,7 +661,7 @@ class TicketGen extends dxBaseClass implements IteratorAggregate {
         $objToReturn->strTicketDescription = $objDbRow->GetColumn($strAliasName, 'Blob');
         $strAlias = $strAliasPrefix . 'TicketDueDate';
         $strAliasName = !empty($strColumnAliasArray[$strAlias]) ? $strColumnAliasArray[$strAlias] : $strAlias;
-        $objToReturn->dttTicketDueDate = $objDbRow->GetColumn($strAliasName, 'DateTime');
+        $objToReturn->dttTicketDueDate = $objDbRow->GetColumn($strAliasName, 'Date');
         $strAlias = $strAliasPrefix . 'TicketStatus';
         $strAliasName = !empty($strColumnAliasArray[$strAlias]) ? $strColumnAliasArray[$strAlias] : $strAlias;
         $objToReturn->strTicketStatus = $objDbRow->GetColumn($strAliasName, 'VarChar');
@@ -1833,7 +1833,7 @@ class TicketGen extends dxBaseClass implements IteratorAggregate {
 				case 'TicketDescription':
 					return new dxQueryNode('TicketDescription', 'TicketDescription', 'Blob', $this);
 				case 'TicketDueDate':
-					return new dxQueryNode('TicketDueDate', 'TicketDueDate', 'DateTime', $this);
+					return new dxQueryNode('TicketDueDate', 'TicketDueDate', 'Date', $this);
 				case 'TicketStatus':
 					return new dxQueryNode('TicketStatus', 'TicketStatus', 'VarChar', $this);
 				case 'TicketUniqueId':

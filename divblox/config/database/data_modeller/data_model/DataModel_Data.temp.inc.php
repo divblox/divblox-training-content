@@ -12,7 +12,7 @@ abstract class DataModelData {
             => array("CategoryLabel"));
 	public static $ProjectEntityAttributeTypeArray = array(
         "Ticket"
-            => array("VARCHAR(50)","TEXT","DATETIME","VARCHAR(50)","VARCHAR(25) UNIQUE"),
+            => array("VARCHAR(50)","TEXT","DATE","VARCHAR(50)","VARCHAR(25) UNIQUE"),
         "Category"
             => array("VARCHAR(25)"));
 	public static $ProjectEntitySingleRelationshipArray = array(
